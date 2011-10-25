@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the reloaded_reference feature.
+ */
+
+include_once('reloaded_reference.features.inc');
