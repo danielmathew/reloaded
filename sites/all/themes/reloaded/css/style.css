@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body {
+background-color: #efefef;
+font: 13px/1.231 arial,helvetica,clean,sans-serif;
+}
+
+#wrapper {
+width: 960px;
+margin: auto;
+background-color: white;
+padding: 20px;
+}
+
+.reloaded-menu .menu {
+}
+
+.reloaded-menu .menu li {
+float:left;
+list-style: none;
+display: inline;
+}
+
+.reloaded-menu .menu li a {
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+text-transform: uppercase;
+color:darkgrey;
+}
+
+.reloaded-menu .menu li a:hover {
+color:lightgrey;
+border-bottom: 2px solid lightgreen;
+}
+
+.forside_reference {
+height: 340px;
+background-color: grey;
+padding-top:20px;
+}
+
+.forside_reference h3 a {
+margin-left: 30px;
+padding-top:20px;
+color: white;
+font-size: 20px;
+text-decoration: none;
+}
+
+.forside_reference p {
+width:420px;
+height:150px;
+margin: 30px;
+color: white;
+font-size: 14px;
+line-height: 22px;
+float:left;
+}
+
+.forside_reference a {
+margin-left: 30px;
+color: white;
+font-size: 15px;
+}
+
+.forside_reference img {
+float:right;
+margin-right:40px;
+margin-top:-60px;
+border: solid 3px white;
+}
+
+.seneste_text {
+width: 260px;
+padding:10px;
+background-color: grey;
+color: white;
+font-size: 14px;
+line-height: 22px;
+float:left;
+}
+
+.forside_liste {
+width:660px;
+height: 222px;
+background-color: grey;
+float:right;
+}
+
+.forside_liste img {
+float:left;
+padding-top: 15px;
+padding-right: 10px;
+}
+
+.senester_referencer img{
+padding:15px;
+float:right;
+}

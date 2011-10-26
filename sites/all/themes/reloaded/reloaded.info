@@ -1,0 +1,13 @@
+; $Id$
+
+name = Reloaded
+description = Theme for reloaded
+core = 7.x
+
+; javascripts
+
+
+
+; General styles
+stylesheets[all][] = css/style.css
+
