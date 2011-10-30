@@ -62,6 +62,15 @@ function reloaded_reference_default_page_manager_pages() {
           0 => 'main',
         ),
         'parent' => NULL,
+        'class' => '',
+        'column_class' => '',
+        'row_class' => '',
+        'region_class' => '',
+        'no_scale' => TRUE,
+        'fixed_width' => '',
+        'column_separation' => '0.5em',
+        'region_separation' => '0.5em',
+        'row_separation' => '0.5em',
       ),
       'main' => array(
         'type' => 'column',
@@ -92,7 +101,8 @@ function reloaded_reference_default_page_manager_pages() {
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
-          0 => 'top',
+          0 => 'top_left',
+          1 => 'top',
         ),
         'parent' => 'main',
         'class' => '',
@@ -100,7 +110,15 @@ function reloaded_reference_default_page_manager_pages() {
       'top' => array(
         'type' => 'region',
         'title' => 'top',
-        'width' => 100,
+        'width' => '74.99352499352499',
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => '',
+      ),
+      'top_left' => array(
+        'type' => 'region',
+        'title' => 'top left',
+        'width' => '25.00647500647501',
         'width_type' => '%',
         'parent' => '1',
         'class' => '',
@@ -112,6 +130,7 @@ function reloaded_reference_default_page_manager_pages() {
       'default' => NULL,
       'center' => NULL,
       'top' => NULL,
+      'top_left' => NULL,
     ),
   );
   $display->cache = array();
@@ -155,6 +174,23 @@ function reloaded_reference_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-2'] = $pane;
     $display->panels['top'][0] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'top_left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'reference-panel_pane_6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-3'] = $pane;
+    $display->panels['top_left'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

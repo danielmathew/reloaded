@@ -49,7 +49,7 @@ function reloaded_reference_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -119,10 +119,9 @@ function reloaded_reference_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '6',
         ),
         'full' => array(
           'label' => 'above',
@@ -134,7 +133,7 @@ function reloaded_reference_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_client',
-      'label' => 'client',
+      'label' => 'Kunde',
       'required' => 1,
       'settings' => array(
         'text_processing' => '0',
@@ -188,10 +187,9 @@ function reloaded_reference_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '5',
+          'type' => 'hidden',
+          'weight' => '7',
         ),
         'full' => array(
           'label' => 'above',
@@ -257,10 +255,9 @@ function reloaded_reference_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'above',
@@ -400,7 +397,7 @@ function reloaded_reference_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -478,7 +475,7 @@ function reloaded_reference_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '8',
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'above',
@@ -558,10 +555,9 @@ function reloaded_reference_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '6',
+          'type' => 'hidden',
+          'weight' => '8',
         ),
         'full' => array(
           'label' => 'above',
@@ -587,6 +583,68 @@ function reloaded_reference_field_default_fields() {
         ),
         'type' => 'text_textfield',
         'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-reference-field_navn'
+  $fields['node-reference-field_navn'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_navn',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'reference',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_navn',
+      'label' => 'navn',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '13',
       ),
     ),
   );
@@ -625,9 +683,8 @@ function reloaded_reference_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '11',
         ),
       ),
@@ -823,10 +880,9 @@ function reloaded_reference_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -859,14 +915,15 @@ function reloaded_reference_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Front img 400x330');
+  t('Kunde');
   t('Large img 710xX');
   t('Link');
   t('Long text');
   t('Opgave');
   t('Sub title');
   t('Top image 710x270');
-  t('client');
   t('client site link');
+  t('navn');
   t('short text');
   t('small img 206x181');
   t('small img code 206x181');
