@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the reloaded_blogs feature.
+ */
+
+include_once('reloaded_blogs.features.inc');
