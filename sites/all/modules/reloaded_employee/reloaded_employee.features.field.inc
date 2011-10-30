@@ -10,6 +10,68 @@
 function reloaded_employee_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-employee-field_bestyrrelse'
+  $fields['node-employee-field_bestyrrelse'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_bestyrrelse',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'Nej',
+          1 => 'Ja',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'employee',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 6,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_bestyrrelse',
+      'label' => 'Bestyrrelse',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '7',
+      ),
+    ),
+  );
+
   // Exported field: 'node-employee-field_email'
   $fields['node-employee-field_email'] = array(
     'field_config' => array(
@@ -117,7 +179,7 @@ function reloaded_employee_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -142,6 +204,68 @@ function reloaded_employee_field_default_fields() {
         ),
         'type' => 'text_textfield',
         'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-employee-field_medarbejder'
+  $fields['node-employee-field_medarbejder'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_medarbejder',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'Nej',
+          1 => 'ja',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'employee',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 5,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_medarbejder',
+      'label' => 'medarbejder',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '6',
       ),
     ),
   );
@@ -355,9 +479,11 @@ function reloaded_employee_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Bestyrrelse');
   t('Job title');
   t('Name');
   t('email');
+  t('medarbejder');
   t('phone');
   t('picture');
 
