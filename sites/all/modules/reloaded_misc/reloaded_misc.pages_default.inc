@@ -1023,7 +1023,10 @@ function reloaded_misc_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'seneste-blogs',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
@@ -1069,7 +1072,10 @@ function reloaded_misc_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'forside-liste',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-3'] = $pane;

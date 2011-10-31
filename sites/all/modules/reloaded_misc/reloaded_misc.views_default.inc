@@ -33,15 +33,12 @@ function reloaded_misc_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = 1;
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['label'] = 'queue';
   $handler->display->display_options['relationships']['nodequeue_rel']['required'] = 1;
-  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = TRUE;
-  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
-    'referencer_forside' => 'referencer_forside',
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -52,7 +49,7 @@ function reloaded_misc_views_default_views() {
   $handler->display->display_options['fields']['field_small_img']['id'] = 'field_small_img';
   $handler->display->display_options['fields']['field_small_img']['table'] = 'field_data_field_small_img';
   $handler->display->display_options['fields']['field_small_img']['field'] = 'field_small_img';
-  /* Sort criterion: Nodequeue: Position */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['position']['id'] = 'position';
   $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['sorts']['position']['field'] = 'position';
