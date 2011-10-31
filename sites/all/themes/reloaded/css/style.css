@@ -86,21 +86,11 @@ float:left;
 list-style-type: none;
 }
 
-.forside_liste {
-background-color: grey;
-}
-
 .front-ref-list {
 width: 200px;
 height:200px;
 float:left;
 list-style-type: none;
-}
-
-.front-blog-list {
-height: 270px;
-margin-top: 250px;
-background-color: grey;
 }
 
 .blog-title a{
@@ -109,7 +99,7 @@ height:55px;
 display: block;
 font-size: 15px;
 font-weight: bold;
-color:white;
+color:black;
 text-decoration: none;
 }
 
