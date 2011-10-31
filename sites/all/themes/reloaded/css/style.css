@@ -71,7 +71,7 @@ margin-top:-60px;
 border: solid 3px white;
 }
 
-.seneste_text {
+.nye-referencer-text {
 width: 260px;
 padding:10px;
 background-color: grey;
@@ -81,20 +81,77 @@ line-height: 22px;
 float:left;
 }
 
-.forside_liste {
-width:660px;
-height: 222px;
-background-color: grey;
-float:right;
-}
-
-.forside_liste img {
+.reference-listen {
 float:left;
-padding-top: 15px;
-padding-right: 10px;
+list-style-type: none;
 }
 
-.senester_referencer img{
-padding:15px;
-float:right;
+.forside_liste {
+background-color: grey;
+}
+
+.front-ref-list {
+width: 200px;
+height:200px;
+float:left;
+list-style-type: none;
+}
+
+.front-blog-list {
+height: 270px;
+margin-top: 250px;
+background-color: grey;
+}
+
+.blog-title a{
+width: 210px;
+height:55px;
+display: block;
+font-size: 15px;
+font-weight: bold;
+color:white;
+text-decoration: none;
+}
+
+.body-text {
+width:210px;
+
+}
+
+.blog-blok {
+float: left;
+list-style-type: none;
+}
+
+.blog_usernames_blog {
+display: none !important;
+}
+
+.employee {
+list-style-type: none;
+float:left;
+}
+
+.bigfatcontactbutton {
+margin: 10px 0;
+padding: 6px 20px;
+display: block;
+text-align: center;
+color: white;
+text-decoration: none;
+line-height: 1.5em;
+font-size: 22px;
+font-family: "CachetBookMedium",verdana;
+text-transform: uppercase;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+background-image: -moz-linear-gradient(100% 100% 90deg,#F51900,#FFA100);
+background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#FFA100),to(#F51900));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F51900',EndColorStr='#FFA100');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#F51900',EndColorStr='#FFA100')";
+border: 1px solid #FA4400;
+text-shadow: 0 1px 1px #666;
+position: relative;
+cursor: pointer;
 }
