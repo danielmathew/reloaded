@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the reloaded_misc feature.
+ */
+
+include_once('reloaded_misc.features.inc');
