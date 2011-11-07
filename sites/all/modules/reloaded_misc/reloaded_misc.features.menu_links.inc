@@ -10,24 +10,6 @@
 function reloaded_misc_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:blog/1
-  $menu_links['main-menu:blog/1'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'blog/1',
-    'router_path' => 'blog/%',
-    'link_title' => 'Blog',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
-  );
   // Exported menu link: main-menu:frontpage
   $menu_links['main-menu:frontpage'] = array(
     'menu_name' => 'main-menu',
@@ -136,7 +118,6 @@ function reloaded_misc_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blog');
   t('Forside');
   t('Jobs I Reload');
   t('Kontakt Os');
