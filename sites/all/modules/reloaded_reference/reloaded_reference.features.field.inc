@@ -515,78 +515,6 @@ function reloaded_reference_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-reference-field_job'
-  $fields['node-reference-field_job'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_job',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'reference',
-      'default_value' => array(
-        0 => array(
-          'value' => 'Job desc goes here...',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '8',
-        ),
-        'full' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '5',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_job',
-      'label' => 'Opgave',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '6',
-      ),
-    ),
-  );
-
   // Exported field: 'node-reference-field_navn'
   $fields['node-reference-field_navn'] = array(
     'field_config' => array(
@@ -645,6 +573,73 @@ function reloaded_reference_field_default_fields() {
         ),
         'type' => 'text_textfield',
         'weight' => '13',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-reference-field_opgave_list'
+  $fields['node-reference-field_opgave_list'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_opgave_list',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'reference',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 13,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_opgave_list',
+      'label' => 'opgave list',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '6',
       ),
     ),
   );
@@ -919,11 +914,11 @@ function reloaded_reference_field_default_fields() {
   t('Large img 710xX');
   t('Link');
   t('Long text');
-  t('Opgave');
   t('Sub title');
   t('Top image 710x270');
   t('client site link');
   t('navn');
+  t('opgave list');
   t('short text');
   t('small img 206x181');
   t('small img code 206x181');
