@@ -10,8 +10,8 @@
 function reloaded_blogs_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-blog-body'
-  $fields['node-blog-body'] = array(
+  // Exported field: 'node-blog_entry-body'
+  $fields['node-blog_entry-body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -39,7 +39,7 @@ function reloaded_blogs_field_default_fields() {
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
-      'bundle' => 'blog',
+      'bundle' => 'blog_entry',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -49,20 +49,13 @@ function reloaded_blogs_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
-        ),
-        'full' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
-            'trim_length' => 600,
+            'trim_length' => '300',
           ),
           'type' => 'text_summary_or_trimmed',
           'weight' => '0',
@@ -71,32 +64,33 @@ function reloaded_blogs_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'body',
       'label' => 'Body',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
+        'display_summary' => 1,
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => 20,
+          'rows' => '20',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-4',
+        'weight' => '2',
       ),
     ),
   );
 
-  // Exported field: 'node-blog-field_blog_img'
-  $fields['node-blog-field_blog_img'] = array(
+  // Exported field: 'node-blog_entry-field_billede'
+  $fields['node-blog_entry-field_billede'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_blog_img',
+      'field_name' => 'field_billede',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -119,7 +113,7 @@ function reloaded_blogs_field_default_fields() {
       'type' => 'image',
     ),
     'field_instance' => array(
-      'bundle' => 'blog',
+      'bundle' => 'blog_entry',
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -128,35 +122,21 @@ function reloaded_blogs_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => '1',
-        ),
-        'full' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => '1',
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'large',
           ),
           'type' => 'image',
           'weight' => '0',
         ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_blog_img',
-      'label' => 'blog img',
+      'field_name' => 'field_billede',
+      'label' => 'Billede',
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
@@ -172,95 +152,92 @@ function reloaded_blogs_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'thumbnail',
+          'preview_image_style' => 'medium',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '-3',
+        'weight' => '1',
       ),
     ),
   );
 
-  // Exported field: 'node-blog-field_overskirft'
-  $fields['node-blog-field_overskirft'] = array(
+  // Exported field: 'node-blog_entry-field_tags'
+  $fields['node-blog_entry-field_tags'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_overskirft',
+      'field_name' => 'field_tags',
       'foreign keys' => array(
-        'format' => array(
+        'tid' => array(
           'columns' => array(
-            'format' => 'format',
+            'tid' => 'tid',
           ),
-          'table' => 'filter_format',
+          'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
-      'module' => 'text',
+      'module' => 'taxonomy',
       'settings' => array(
-        'max_length' => '255',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => 0,
+          ),
+        ),
       ),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
-      'bundle' => 'blog',
+      'bundle' => 'blog_entry',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
-        ),
-        'full' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'teaser' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_overskirft',
-      'label' => 'overskirft',
+      'field_name' => 'field_tags',
+      'label' => 'Tags',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'text',
+        'active' => 0,
+        'module' => 'taxonomy',
         'settings' => array(
-          'size' => '60',
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
         ),
-        'type' => 'text_textfield',
-        'weight' => '-2',
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '3',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Billede');
   t('Body');
-  t('blog img');
-  t('overskirft');
+  t('Tags');
 
   return $fields;
 }

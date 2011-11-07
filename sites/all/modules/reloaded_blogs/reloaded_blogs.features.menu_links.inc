@@ -10,23 +10,27 @@
 function reloaded_blogs_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: navigation:blog/%
-  $menu_links['navigation:blog/%'] = array(
-    'menu_name' => 'navigation',
-    'link_path' => 'blog/%',
-    'router_path' => 'blog/%',
-    'link_title' => 'My blog',
-    'options' => array(),
-    'module' => 'system',
+  // Exported menu link: main-menu:blog
+  $menu_links['main-menu:blog'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'blog',
+    'router_path' => 'blog',
+    'link_title' => 'Blog',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-44',
+    'weight' => '-47',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('My blog');
+  t('Blog');
 
 
   return $menu_links;
