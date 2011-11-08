@@ -184,7 +184,7 @@ function reloaded_blogs_views_default_views() {
   $handler->display->display_options['fields']['view_node']['hide_empty'] = 0;
   $handler->display->display_options['fields']['view_node']['empty_zero'] = 0;
   $handler->display->display_options['fields']['view_node']['hide_alter_empty'] = 0;
-  $handler->display->display_options['fields']['view_node']['text'] = 'Læs mere her!';
+  $handler->display->display_options['fields']['view_node']['text'] = 'Læs mere';
   /* Field: Content: Comment count */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
