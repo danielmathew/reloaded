@@ -484,6 +484,73 @@ function reloaded_misc_default_page_manager_handlers() {
     $display->panels['center'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
+    $pane->panel = 'center';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '0',
+      'comments_per_page' => '10',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'center';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'anon_links' => 0,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'INDSEND KOMMENTAR',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'tags';
+    $pane->type = 'node_author';
+    $pane->subtype = 'node_author';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'Skrevet af:',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-4'] = $pane;
+    $display->panels['tags'][0] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
     $pane->panel = 'tags';
     $pane->type = 'node_terms';
     $pane->subtype = 'node_terms';
@@ -504,9 +571,9 @@ function reloaded_misc_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-2'] = $pane;
-    $display->panels['tags'][0] = 'new-2';
+    $pane->position = 1;
+    $display->content['new-5'] = $pane;
+    $display->panels['tags'][1] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -743,6 +810,45 @@ function reloaded_misc_default_page_manager_handlers() {
     $display->panels['center'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
+    $pane->panel = 'center';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'center';
+    $pane->type = 'pane_messages';
+    $pane->subtype = 'pane_messages';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
     $pane->panel = 'foot_menu';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-foot-menu';
@@ -759,10 +865,10 @@ function reloaded_misc_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-2'] = $pane;
-    $display->panels['foot_menu'][0] = 'new-2';
+    $display->content['new-4'] = $pane;
+    $display->panels['foot_menu'][0] = 'new-4';
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-5';
     $pane->panel = 'logo';
     $pane->type = 'page_logo';
     $pane->subtype = 'page_logo';
@@ -776,10 +882,10 @@ function reloaded_misc_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['logo'][0] = 'new-3';
+    $display->content['new-5'] = $pane;
+    $display->panels['logo'][0] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-6';
     $pane->panel = 'menu';
     $pane->type = 'block';
     $pane->subtype = 'system-main-menu';
@@ -799,10 +905,10 @@ function reloaded_misc_default_page_manager_handlers() {
     );
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-4'] = $pane;
-    $display->panels['menu'][0] = 'new-4';
+    $display->content['new-6'] = $pane;
+    $display->panels['menu'][0] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-7';
     $pane->panel = 'orange_left';
     $pane->type = 'node';
     $pane->subtype = 'node';
@@ -828,10 +934,10 @@ function reloaded_misc_default_page_manager_handlers() {
     );
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-5'] = $pane;
-    $display->panels['orange_left'][0] = 'new-5';
+    $display->content['new-7'] = $pane;
+    $display->panels['orange_left'][0] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-8';
     $pane->panel = 'orange_right';
     $pane->type = 'node';
     $pane->subtype = 'node';
@@ -857,10 +963,10 @@ function reloaded_misc_default_page_manager_handlers() {
     );
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-6'] = $pane;
-    $display->panels['orange_right'][0] = 'new-6';
+    $display->content['new-8'] = $pane;
+    $display->panels['orange_right'][0] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-9';
     $pane->panel = 'reload_info';
     $pane->type = 'node';
     $pane->subtype = 'node';
@@ -883,10 +989,10 @@ function reloaded_misc_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-7'] = $pane;
-    $display->panels['reload_info'][0] = 'new-7';
+    $display->content['new-9'] = $pane;
+    $display->panels['reload_info'][0] = 'new-9';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-10';
     $pane->panel = 'search_box';
     $pane->type = 'block';
     $pane->subtype = 'search-form';
@@ -894,7 +1000,7 @@ function reloaded_misc_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Find indhold',
+      'override_title_text' => 'Søg efter indhold',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -903,8 +1009,8 @@ function reloaded_misc_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-8'] = $pane;
-    $display->panels['search_box'][0] = 'new-8';
+    $display->content['new-10'] = $pane;
+    $display->panels['search_box'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1493,7 +1599,7 @@ Advokat: Helle Jørgsholm',
     $pane->pid = 'new-6';
     $pane->panel = 'vores_folk';
     $pane->type = 'views_panes';
-    $pane->subtype = 'employees-panel_pane_3';
+    $pane->subtype = 'employees-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
